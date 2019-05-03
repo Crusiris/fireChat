@@ -11,6 +11,9 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 
+//Servicios
+import { ChatService } from "./providers/chat.service";
+
 import { environment } from "../environments/environment";
 
 //Componentes
@@ -25,7 +28,7 @@ import { ChatComponent } from "./components/chat/chat.component";
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
